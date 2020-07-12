@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using LIS.Domain.Operations;
 using LIS.Exceptions;
 
@@ -12,7 +13,7 @@ namespace LIS.Service {
             var assembly = typeof(Operation).Assembly;
             operations = assembly.GetTypes()
                 .Where(type => type.IsDefined(typeof(OperationAttribute), false))
-                .ToDictionary( type => type.Name.ToLower(), type => type);
+                .ToDictionary( type => type.GetCustomAttribute<OperationAttribute>(false).Name.ToLower(), type => type);
         }
         public Operation CreateOperation(string name) 
             => operations.ContainsKey(name.ToLower()) ? 

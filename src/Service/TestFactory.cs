@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using LIS.Domain.Tests;
 using LIS.Exceptions;
 
@@ -13,7 +14,7 @@ namespace LIS.Service {
             var assembly = typeof(Test).Assembly;
             tests = assembly.GetTypes()
                 .Where(type => type.IsDefined(typeof(TestAttribute), false))
-                .ToDictionary( type => type.Name.ToLower(), type => type);
+                .ToDictionary( type => type.GetCustomAttribute<TestAttribute>(false).Name.ToLower(), type => type);
 
             this.operationFactory = operationFactory;
         }

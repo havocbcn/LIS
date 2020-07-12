@@ -13,10 +13,10 @@ namespace End2End.LIS.Domain {
             Test testExample1 = null;
             Order order = null;
 
-            "Given an order with test TestExample1"
+            "Given an order"
                 .x(() =>  order = new Order(testFactory));
 
-            "that is added a test" 
+            "that is added a biochemistry test" 
                 .x(() => testExample1 = order.AddTest("testExample1"));
 
             "And operation OperationExample1 is added to testExample1" 
@@ -40,10 +40,10 @@ namespace End2End.LIS.Domain {
             Test testExample1 = null;
             Order order = null;
 
-            "Given an order with test TestExample1"
+            "Given an order"
                 .x(() =>  order = new Order(testFactory));
 
-            "that is added a test" 
+            "that is added a biochemistry test" 
                 .x(() => testExample1 = order.AddTest("testExample1"));
 
             "And operation OperationExample1 and OperationExample2 is added to testExample1" 
@@ -60,6 +60,32 @@ namespace End2End.LIS.Domain {
                      testExample1.Result.Should().Be(Result.Negative);
                      testExample1.Confidence.Should().Be(1f);
                      (testExample1 as BiochemistryTest).BiochemistryProperty.Should().Be(0.0f);
+                });
+        }
+
+        [Scenario]
+        public void ExecuteOperation1InImmunologyTest() {
+            var operationFactory = new OperationFactory();
+            var testFactory = new TestFactory(operationFactory);
+            Test testExample2 = null;
+            Order order = null;
+
+            "Given an order"
+                .x(() =>  order = new Order(testFactory));
+
+            "that is added a immunology test" 
+                .x(() => testExample2 = order.AddTest("testExample2"));
+
+            "And operation OperationExample1 is added" 
+                .x(() => testExample2.AddOperation("operationExample1"));
+
+            "And the order is executed"
+                .x(()=> order.ExecuteOperations());
+
+            "Then the test must be negative"
+                .x( ()=> { 
+                     testExample2.Result.Should().Be(Result.Negative);
+                     testExample2.Confidence.Should().Be(1.0f);
                 });
         }
     }

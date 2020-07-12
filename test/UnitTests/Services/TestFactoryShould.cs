@@ -6,6 +6,7 @@ using LIS.Exceptions;
 using LIS.Service;
 using NSubstitute;
 using Xunit;
+using System.Reflection;
 
 namespace UnitTest.LIS.Service {
     public class TestFactoryShould {
@@ -38,6 +39,18 @@ namespace UnitTest.LIS.Service {
                 .Where(myType => myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf(typeof(Test)))
                 .Where(type => !type.IsDefined(typeof(TestAttribute), false))
                 .Should().BeEmpty();                
+        }
+
+        [Fact]
+        public void FailIfATestNameIsRepeated() {
+            var assembly = typeof(Test).Assembly;
+
+            assembly.GetTypes()
+                .Where(type => type.IsDefined(typeof(TestAttribute), false))
+                .GroupBy(type => type.GetCustomAttribute<TestAttribute>(false).Name.ToLower())
+                .Where(g => g.Count() > 1)
+                .Select(y => y.Key)
+                .Should().BeEmpty();           
         }
     }
 }

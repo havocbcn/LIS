@@ -2,11 +2,10 @@ using System;
 using System.Linq;
 using FluentAssertions;
 using LIS.Domain.Operations;
-using LIS.Domain.Tests;
 using LIS.Exceptions;
 using LIS.Service;
-using NSubstitute;
 using Xunit;
+using System.Reflection;
 
 namespace UnitTest.LIS.Service {
     public class OperationFactoryShould {
@@ -34,7 +33,20 @@ namespace UnitTest.LIS.Service {
             assembly.GetTypes()
                 .Where(myType => myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf(typeof(Operation)))
                 .Where(type => !type.IsDefined(typeof(OperationAttribute), false))
-                .Should().BeEmpty();                
+                .Should().BeEmpty();    
+        }  
+        
+        [Fact]
+        public void FailIfAOperationNameIsRepeated() {
+            var assembly = typeof(Operation).Assembly;
+
+            assembly.GetTypes()
+                .Where(type => type.IsDefined(typeof(OperationAttribute), false))
+                .GroupBy(type => type.GetCustomAttribute<OperationAttribute>(false).Name.ToLower())
+                .Where(g => g.Count() > 1)
+                .Select(y => y.Key)
+                .Should().BeEmpty();           
+          
         }
     }
 }
