@@ -11,6 +11,7 @@ namespace Test.LIS.Domain {
         [Fact]
         public void BeCreatedEmpty() {
             var testFactory = Substitute.For<ITestFactory>();
+            
             var order = new Order(testFactory);
 
             testFactory.Received(0).CreateTest(Arg.Any<string>());

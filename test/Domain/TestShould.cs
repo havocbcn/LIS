@@ -8,7 +8,8 @@ namespace Test.LIS.Domain {
         [Fact]
         public void BeCreatedEmpty() {
             var operationFactory = Substitute.For<IOperationFactory>();
-            var order = new TestExample1(operationFactory);
+
+            var test = new TestExample1(operationFactory);
 
             operationFactory.Received(0).CreateOperation(Arg.Any<string>());
         }
