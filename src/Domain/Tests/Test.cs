@@ -5,9 +5,9 @@ using LIS.Service;
 namespace LIS.Domain.Tests {
     public abstract class Test {
         private readonly IOperationFactory operationFactory;
-        private List<Operation> operations = new List<Operation>(); 
+        private readonly List<Operation> operations = new List<Operation>(); 
 
-        public Test(IOperationFactory operationFactory) {
+        protected Test(IOperationFactory operationFactory) {
             this.operationFactory = operationFactory;
         }
 

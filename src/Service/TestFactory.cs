@@ -14,14 +14,14 @@ namespace LIS.Service {
             var assembly = typeof(Test).Assembly;
             tests = assembly.GetTypes()
                 .Where(type => type.IsDefined(typeof(TestAttribute), false))
-                .ToDictionary( type => type.GetCustomAttribute<TestAttribute>(false).Name.ToLower(), type => type);
+                .ToDictionary( type => type.GetCustomAttribute<TestAttribute>(false).Name.ToLowerInvariant(), type => type);
 
             this.operationFactory = operationFactory;
         }
 
         public Test CreateTest(string name) 
-            => tests.ContainsKey(name.ToLower()) ? 
-                (Test)Activator.CreateInstance(tests[name.ToLower()], new object[] { operationFactory }) :
+            => tests.ContainsKey(name.ToLowerInvariant()) ? 
+                (Test)Activator.CreateInstance(tests[name.ToLowerInvariant()], new object[] { operationFactory }) :
                 throw new TestNotFoundException(name);
         
     }

@@ -14,6 +14,7 @@ namespace UnitTest.LIS.Domain {
             
             var order = new Order(testFactory);
 
+            order.Should().NotBeNull();
             testFactory.Received(0).CreateTest(Arg.Any<string>());
         }
 

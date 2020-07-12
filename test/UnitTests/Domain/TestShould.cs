@@ -14,6 +14,7 @@ namespace UnitTest.LIS.Domain {
 
             var test = new TestExample1(operationFactory);
 
+            test.Should().NotBeNull();
             operationFactory.Received(0).CreateOperation(Arg.Any<string>());
         }
 

@@ -6,7 +6,7 @@ namespace LIS.Domain.Operations {
   
     public class OperationAttribute : Attribute
     {
-        public readonly string Name;
+        public string Name { get; }
 
         public OperationAttribute(string name)
         {

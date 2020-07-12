@@ -13,11 +13,11 @@ namespace LIS.Service {
             var assembly = typeof(Operation).Assembly;
             operations = assembly.GetTypes()
                 .Where(type => type.IsDefined(typeof(OperationAttribute), false))
-                .ToDictionary( type => type.GetCustomAttribute<OperationAttribute>(false).Name.ToLower(), type => type);
+                .ToDictionary( type => type.GetCustomAttribute<OperationAttribute>(false).Name.ToLowerInvariant(), type => type);
         }
         public Operation CreateOperation(string name) 
-            => operations.ContainsKey(name.ToLower()) ? 
-                (Operation)Activator.CreateInstance(operations[name.ToLower()]) : 
+            => operations.ContainsKey(name.ToLowerInvariant()) ? 
+                (Operation)Activator.CreateInstance(operations[name.ToLowerInvariant()]) : 
                 throw new OperationNotFoundException(name);
         
     }

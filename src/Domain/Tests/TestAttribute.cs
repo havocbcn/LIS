@@ -6,7 +6,7 @@ namespace LIS.Domain.Tests {
   
     public class TestAttribute : Attribute
     {
-        public readonly string Name;
+        public string Name { get; }
 
         public TestAttribute(string name)
         {
