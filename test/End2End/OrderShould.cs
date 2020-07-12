@@ -7,7 +7,7 @@ using Xbehave;
 namespace End2End.LIS.Domain {
     public class OrderShould {
         [Scenario]
-        public void ExecuteAOperationInATest() {
+        public void ExecuteOperation1InTest1() {
             var operationFactory = new OperationFactory();
             var testFactory = new TestFactory(operationFactory);
             Test testExample1 = null;
@@ -30,6 +30,36 @@ namespace End2End.LIS.Domain {
                      testExample1.Result.Should().Be(Result.Positive);
                      testExample1.Confidence.Should().Be(0.95f);
                      (testExample1 as BiochemistryTest).BiochemistryProperty.Should().Be(0.32f);
+                });
+        }
+
+        [Scenario]
+        public void ExecuteOperation1And2InTest1() {
+            var operationFactory = new OperationFactory();
+            var testFactory = new TestFactory(operationFactory);
+            Test testExample1 = null;
+            Order order = null;
+
+            "Given an order with test TestExample1"
+                .x(() =>  order = new Order(testFactory));
+
+            "that is added a test" 
+                .x(() => testExample1 = order.AddTest("testExample1"));
+
+            "And operation OperationExample1 and OperationExample2 is added to testExample1" 
+                .x(() => {
+                    testExample1.AddOperation("operationExample1");
+                    testExample1.AddOperation("operationExample2");
+                });
+
+            "And the order is executed"
+                .x(()=> order.ExecuteOperations());
+
+            "Then the test must be negative"
+                .x( ()=> { 
+                     testExample1.Result.Should().Be(Result.Negative);
+                     testExample1.Confidence.Should().Be(1f);
+                     (testExample1 as BiochemistryTest).BiochemistryProperty.Should().Be(0.0f);
                 });
         }
     }

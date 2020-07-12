@@ -13,6 +13,10 @@ namespace LIS.Domain.Tests {
                 this.BiochemistryProperty = 0.32f;
                 this.Confidence = 0.95f;
                 this.Result = Result.Positive;
+            } else {
+                this.BiochemistryProperty = 0;
+                this.Confidence = 1f;
+                this.Result = Result.Negative;
             }
         }
     }
