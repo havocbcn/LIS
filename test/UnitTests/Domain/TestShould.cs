@@ -6,7 +6,7 @@ using LIS.Service;
 using NSubstitute;
 using Xunit;
 
-namespace Test.LIS.Domain {
+namespace UnitTest.LIS.Domain {
     public class TestShould {
         [Fact]
         public void BeCreatedEmpty() {
@@ -28,6 +28,6 @@ namespace Test.LIS.Domain {
 
             operationFactory.Received(1).CreateOperation(name);
             operationActual.Should().Be(operation);
-        }
+        }        
     }
 }

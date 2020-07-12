@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LIS.Domain.Tests;
 using LIS.Service;
@@ -16,5 +17,8 @@ namespace LIS.Domain {
             tests.Add(test);
             return test;
         }
+       
+        public void ExecuteOperations() =>
+            tests.ForEach( test => test.ExecuteOperations());
     }
 }

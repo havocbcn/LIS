@@ -6,7 +6,7 @@ using LIS.Service;
 using NSubstitute;
 using Xunit;
 
-namespace Test.LIS.Domain {
+namespace UnitTest.LIS.Domain {
     public class OrderShould {
         [Fact]
         public void BeCreatedEmpty() {

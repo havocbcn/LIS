@@ -16,5 +16,14 @@ namespace LIS.Domain.Tests {
             operations.Add(operation);
             return operation;
         }
+
+        internal void ExecuteOperations() 
+            => operations.ForEach(operation => operation.Execute(this));
+
+        public abstract void SetCalculation(int calculation);
+
+        public Result Result { get; internal set; }        
+
+        public float Confidence { get; internal set; }
     }
 }

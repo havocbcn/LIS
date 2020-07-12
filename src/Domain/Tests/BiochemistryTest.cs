@@ -5,5 +5,7 @@ namespace LIS.Domain.Tests {
         public BiochemistryTest(IOperationFactory operationFactory) : base(operationFactory) {
 
         }
+
+        public float BiochemistryProperty { get; internal set; }
     }
 }
