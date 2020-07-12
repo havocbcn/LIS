@@ -19,7 +19,8 @@ namespace Test.LIS.Domain {
         [Theory, AutoData]
         public void AddATestByName(string testName) {
             var testFactory = Substitute.For<ITestFactory>();
-            var test = new TestExample1();
+            var operationFactory = Substitute.For<IOperationFactory>();
+            var test = new TestExample1(operationFactory);
             testFactory.CreateTest(testName).Returns(test);
 
             var order = new Order(testFactory);

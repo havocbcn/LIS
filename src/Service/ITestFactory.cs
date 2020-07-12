@@ -1,4 +1,4 @@
-using LIS.Domain;
+using LIS.Domain.Tests;
 
 namespace LIS.Service {
     public interface ITestFactory {
