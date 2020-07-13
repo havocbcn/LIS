@@ -10,11 +10,11 @@ namespace LIS.Domain.Tests {
 
         public override void SetCalculation(int calculation) {
             if (calculation > 50) {
-                this.BiochemistryProperty = 0.32f;
+                this.PropA = 0.32f;
                 this.Confidence = 0.95f;
                 this.Result = Result.Positive;
             } else {
-                this.BiochemistryProperty = 0;
+                this.PropA = 0;
                 this.Confidence = 1f;
                 this.Result = Result.Negative;
             }

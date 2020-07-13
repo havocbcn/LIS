@@ -6,6 +6,6 @@ namespace LIS.Domain.Tests {
 
         }
 
-        public float ImmulogyProperty { get; internal set; }
+        public float PropB { get; internal set; }
     }
 }

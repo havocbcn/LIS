@@ -29,7 +29,7 @@ namespace End2End.LIS.Domain {
                 .x( ()=> { 
                      testExample1.Result.Should().Be(Result.Positive);
                      testExample1.Confidence.Should().Be(0.95f);
-                     (testExample1 as BiochemistryTest).BiochemistryProperty.Should().Be(0.32f);
+                     (testExample1 as BiochemistryTest).PropA.Should().Be(0.32f);
                 });
         }
 
@@ -59,7 +59,7 @@ namespace End2End.LIS.Domain {
                 .x( ()=> { 
                      testExample1.Result.Should().Be(Result.Negative);
                      testExample1.Confidence.Should().Be(1f);
-                     (testExample1 as BiochemistryTest).BiochemistryProperty.Should().Be(0.0f);
+                     (testExample1 as BiochemistryTest).PropA.Should().Be(0.0f);
                 });
         }
 

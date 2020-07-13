@@ -6,6 +6,6 @@ namespace LIS.Domain.Tests {
 
         }
 
-        public float BiochemistryProperty { get; internal set; }
+        public float PropA { get; internal set; }
     }
 }
