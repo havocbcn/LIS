@@ -23,7 +23,7 @@ I do not split `Operation` classes in something like `GenericOperation`, `Bioche
 
 When the `Order` is fully created it can be `Executed`, that calls the `Execute` in all tests that call the `Execute` in all operations that invoke the `SetCalculation` in the `Test` that sets the inner properties of the tests.
 
-The test module itself doesn't exist, it will manage all `Orders`, but to maintain the solution simple, I didn't include it.\` 
+To maintain the solution simple, I didn't include the test module that would manage all `Orders`, neither the Patient's sample that is related to the `Tests`. 
 
 ## Extensibility
 
@@ -46,7 +46,11 @@ The test module itself doesn't exist, it will manage all `Orders`, but to mainta
 -   *TDD* (started with inside out and changed to outside in, the github history will show)
 -   *Semantic commit messages*
 -   *Object callisthenics*
--   *DDD*, the domain is quite small (one bounding context) so I only used to guide the folder structure and class naming.
+
+### Proposed project structure ###
+Using *DDD*, the domain is quite small (one bounding context) so I only used to guide the folder structure: Domain, Domain services and Exceptions. I do not include Repositories or Proxies.
+
+Class names are took from the documentation.
 
 ## Refactoring strategy
 
