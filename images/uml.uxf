@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
-  <zoom_level>9</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>342</y>
-      <w>279</w>
-      <h>144</h>
+      <x>506</x>
+      <y>286</y>
+      <w>341</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /Test/
 --
 - OperationFactory: IOperationFactory
 - Operations: List&lt;Operation&gt;
-+ Result: Result
-+ Confidence: float
++ Result: Result {R/O}
++ Confidence: float {R/O}
 --
 + AddOperation(string name): Operation
 + ExecuteOperations()
@@ -24,66 +24,66 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>243</x>
-      <y>540</y>
-      <w>171</w>
-      <h>63</h>
+      <x>242</x>
+      <y>528</y>
+      <w>209</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /BiochemistryTest/
 --
-+ PropA</panel_attributes>
++ PropA {R/O}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>540</y>
-      <w>135</w>
-      <h>63</h>
+      <x>473</x>
+      <y>528</y>
+      <w>165</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /ImmunologyTest/
 --
-+ PropB</panel_attributes>
++ PropB {R/O}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>540</y>
-      <w>135</w>
-      <h>63</h>
+      <x>660</x>
+      <y>528</y>
+      <w>165</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /MicrobiologyTest/
 --
-+ PropC</panel_attributes>
++ PropC {R/O}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>738</x>
-      <y>540</y>
-      <w>135</w>
-      <h>63</h>
+      <x>847</x>
+      <y>528</y>
+      <w>165</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /HematologyTest/
 --
-+ PropD</panel_attributes>
++ PropD {R/O}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>666</y>
-      <w>216</w>
-      <h>63</h>
+      <x>110</x>
+      <y>682</y>
+      <w>264</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>TestExample1
 --
@@ -93,54 +93,54 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>333</x>
-      <y>477</y>
-      <w>189</w>
-      <h>81</h>
+      <x>352</x>
+      <y>451</y>
+      <w>330</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>190.0;10.0;190.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+    <additional_attributes>280.0;10.0;280.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>477</y>
-      <w>27</w>
-      <h>81</h>
+      <x>550</x>
+      <y>451</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;10.0;30.0;10.0;70.0</additional_attributes>
+    <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>477</y>
-      <w>180</w>
-      <h>81</h>
+      <x>649</x>
+      <y>451</y>
+      <w>121</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;180.0;40.0;180.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;90.0;40.0;90.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>477</y>
-      <w>333</w>
-      <h>81</h>
+      <x>649</x>
+      <y>451</y>
+      <w>308</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;350.0;40.0;350.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;260.0;40.0;260.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>189</x>
+      <x>176</x>
       <y>594</y>
-      <w>171</w>
-      <h>90</h>
+      <w>209</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>170.0;10.0;170.0;50.0;80.0;50.0;80.0;80.0;10.0;80.0</additional_attributes>
@@ -148,10 +148,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>666</y>
-      <w>216</w>
-      <h>63</h>
+      <x>385</x>
+      <y>682</y>
+      <w>264</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>TestExample2
 --
@@ -161,10 +161,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>333</x>
+      <x>352</x>
       <y>594</y>
-      <w>108</w>
-      <h>90</h>
+      <w>132</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0;100.0;50.0;100.0;80.0</additional_attributes>
@@ -172,27 +172,27 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>504</y>
-      <w>108</w>
-      <h>99</h>
+      <x>0</x>
+      <y>484</y>
+      <w>132</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 /Result/
 --
-NotTested
-Inconclusive
-Positive
-Negative</panel_attributes>
++ NotTested
++ Inconclusive
++ Positive
++ Negative</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>819</x>
-      <y>423</y>
-      <w>171</w>
-      <h>63</h>
+      <x>946</x>
+      <y>385</y>
+      <w>132</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Attribute&gt;&gt;
 /TestAttribute/
@@ -203,10 +203,10 @@ Negative</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>729</x>
-      <y>432</y>
-      <w>108</w>
-      <h>45</h>
+      <x>836</x>
+      <y>396</y>
+      <w>132</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -217,10 +217,10 @@ Is named &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>180</y>
-      <w>279</w>
-      <h>81</h>
+      <x>506</x>
+      <y>110</y>
+      <w>341</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>TestFactory
 --
@@ -233,22 +233,22 @@ Is named &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>252</y>
-      <w>108</w>
-      <h>108</h>
+      <x>671</x>
+      <y>198</y>
+      <w>132</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;Instantiate&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>81</y>
-      <w>279</w>
-      <h>54</h>
+      <x>506</x>
+      <y>0</y>
+      <w>341</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 /ITestFactory/
@@ -259,21 +259,21 @@ Is named &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>126</y>
-      <w>27</w>
-      <h>72</h>
+      <x>671</x>
+      <y>55</y>
+      <w>33</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>342</y>
-      <w>243</w>
-      <h>99</h>
+      <x>0</x>
+      <y>286</y>
+      <w>297</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>Order
 --
@@ -287,10 +287,10 @@ Is named &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>279</x>
-      <y>360</y>
-      <w>198</w>
-      <h>45</h>
+      <x>286</x>
+      <y>308</y>
+      <w>242</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -301,10 +301,10 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>342</y>
-      <w>153</w>
-      <h>72</h>
+      <x>1177</x>
+      <y>286</y>
+      <w>187</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 /Operation/
@@ -315,10 +315,10 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>999</x>
-      <y>504</y>
-      <w>153</w>
-      <h>72</h>
+      <x>1078</x>
+      <y>484</y>
+      <w>187</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>OperationExample1
 --
@@ -328,10 +328,10 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1170</x>
-      <y>504</y>
-      <w>153</w>
-      <h>72</h>
+      <x>1287</x>
+      <y>484</y>
+      <w>187</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>OperationExample2
 --
@@ -341,10 +341,10 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
-      <y>405</y>
-      <w>117</w>
-      <h>117</h>
+      <x>1155</x>
+      <y>363</y>
+      <w>143</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>110.0;10.0;110.0;70.0;10.0;70.0;10.0;110.0</additional_attributes>
@@ -352,10 +352,10 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
-      <y>405</y>
-      <w>117</w>
-      <h>117</h>
+      <x>1265</x>
+      <y>363</y>
+      <w>143</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0;110.0;70.0;110.0;110.0</additional_attributes>
@@ -363,25 +363,25 @@ contains a collection of &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>729</x>
-      <y>369</y>
-      <w>369</w>
-      <h>45</h>
+      <x>836</x>
+      <y>319</y>
+      <w>363</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..n
 Execute  &gt;
 &lt; Set the calculation</panel_attributes>
-    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1314</x>
-      <y>351</y>
-      <w>189</w>
-      <h>54</h>
+      <x>1463</x>
+      <y>297</y>
+      <w>176</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Attribute&gt;&gt;
 /OperationAttribute/
@@ -392,10 +392,10 @@ Execute  &gt;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1224</x>
-      <y>360</y>
-      <w>108</w>
-      <h>45</h>
+      <x>1353</x>
+      <y>308</y>
+      <w>132</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -406,10 +406,10 @@ Is named &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1017</x>
-      <y>99</y>
-      <w>279</w>
-      <h>54</h>
+      <x>1100</x>
+      <y>0</y>
+      <w>341</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 /IOperationFactory/
@@ -420,10 +420,10 @@ Is named &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1017</x>
-      <y>198</y>
-      <w>279</w>
-      <h>81</h>
+      <x>1100</x>
+      <y>110</y>
+      <w>341</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>OperationFactory
 --
@@ -435,21 +435,21 @@ Is named &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
-      <y>144</y>
-      <w>27</w>
-      <h>72</h>
+      <x>1265</x>
+      <y>55</y>
+      <w>33</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
-      <y>270</y>
-      <w>108</w>
-      <h>90</h>
+      <x>1265</x>
+      <y>198</y>
+      <w>132</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;Instantiate&gt;&gt;</panel_attributes>
@@ -458,62 +458,62 @@ Is named &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>207</x>
-      <y>225</y>
-      <w>180</w>
-      <h>54</h>
+      <x>275</x>
+      <y>165</y>
+      <w>154</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Exception&gt;&gt;
 /TestNotFound/
 --
-message: string</panel_attributes>
++ message: string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>378</x>
-      <y>225</y>
-      <w>99</w>
-      <h>36</h>
+      <x>418</x>
+      <y>165</y>
+      <w>110</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 Throw</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>936</x>
-      <y>234</y>
+      <x>1023</x>
+      <y>154</y>
       <w>99</w>
-      <h>36</h>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 Throw</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>765</x>
-      <y>234</y>
-      <w>180</w>
-      <h>63</h>
+      <x>869</x>
+      <y>154</y>
+      <w>165</w>
+      <h>77</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;exception&gt;&gt;
+    <panel_attributes>&lt;&lt;Exception&gt;&gt;
 /OperationNotFound/
 --
-message: string</panel_attributes>
++ message: string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>729</x>
-      <y>666</y>
-      <w>315</w>
-      <h>90</h>
+      <x>836</x>
+      <y>682</y>
+      <w>385</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Operations set the result using this function and the tests sets the parameters.
 Example: the result color of a operation is blue, the test will save what it means for him: Positive with 100% confidence and so on
@@ -523,12 +523,59 @@ bg=#CCCCCC</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
-      <y>684</y>
-      <w>180</w>
-      <h>27</h>
+      <x>638</x>
+      <y>704</y>
+      <w>220</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>319</x>
+      <y>374</y>
+      <w>154</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Just two common properties
+ReadOnly for public
+bg=#CCCCCC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>374</y>
+      <w>66</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;30.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>143</x>
+      <y>440</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>A property type
+bg=#CCCCCC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>55</x>
+      <y>451</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;30.0;80.0;10.0</additional_attributes>
   </element>
 </diagram>
