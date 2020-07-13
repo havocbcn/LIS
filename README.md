@@ -60,25 +60,28 @@ Class names are took from the documentation.
 
 In some conditions, no static or "new" code, or third party code (like saving to a database) must be executed, testing cannot be done with it
 
-This code will be mocked in tests so the idea is move the code to a new class with an interface, the class will be injected to the code, and the code will use the interface.
+This code has to be mocked in tests so the idea is move the code to a new class with an interface, the class will be injected to the code, and the code will use the interface.
 
 In some cases, it is necessary to create seams for code that cannot be moved.
 
 ### Create tests
 
-Some tests must be placed (characterization test or golden master, depending on the code) using mocks to provide or collect information or disallowing saving data or sending emails.
+Some tests must be placed (characterization test or golden master, depending of the code). It will use mocks/stubs to provide or collect information and to disallow doing permanent operations like saving data or sending emails.
 Use any code coverage tool to look up relevant code not tested: SonarQube, OpenCover, Coverlet, dotCover... and repeat until a good safety net is placed.
 
 ### Refactor
 
-Note: each operation will be a small one, no new functionality are introduced.
+Note: each operation will be a small one, no new functionality are introduced. The main idea is do not break the tests, so each operation must live with the old code implying that in one moment everything could be duplicated (in some new and old code)
 
-The code will mimic the new structure using only one test type (with all test code) and one operation (with all operations code), after that, some specialized tests or operations will be created moving code from the generic code.
+The code will mimic the new structure using only one test (with all test code) and one operation (with all operations code), after that, some specialized tests or operations will be created moving code from the generic code.
 
 -   Join operations code as much as possible
 -   Join test properties
--   Join SetCalculation code (the part of operations that set test parameters)- Move test and SetCalculation to a new generic Test class (move code to a new class): it  will have all tests properties with all SetCalculation code,  the old code will create instances of this test, run the operations and set the result to it.
--   Inject the Test Factory- Call to test factory to create the test, if no test could be created use the previous generic test class- Create specific tests, one at a time, moving  the code from the generic test to specialized tests- Inject the Operation Factory
+-   Join SetCalculation code (the part of operations that set test parameters)
+-   Move test and SetCalculation to a new generic Test class (move code to a new class): it  will have all tests properties with all SetCalculation code,  the old code will create instances of this test, run the operations and set the result to it.
+-   Inject the Test Factory
+-   Call to test factory to create the test, if no test could be created use the previous generic test class
+-   Create specific tests, one at a time, moving the code from the generic test to specialized tests- Inject the Operation Factory
 -   Call the operation factory, if no code is returned then old code is executed
--   Move operations to new operation's classes, one at a time, same strategy with tests: inject the test factory, call it, if no test is found use the old code, move test code to the new classes
+-   Move operations to new operation's classes, one at a time, using the same strategy that tests: inject the operation factory, call it, if no operation is found use the old code, move common operation code to the new specialized classes
 
